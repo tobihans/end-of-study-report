@@ -1,0 +1,14 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: LaTeX auto-rebuild
+    command: >
+      while find . -name '*.tex' | xargs inotifywait -qqre modify .; do \
+        latexmk -pdf ; \
+      done
+  - name: Terminal
+
+vscode:
+  extensions:
+    - efoerster.texlab@1.10.0:/Vq+k9Ug/81LYWajjTgMpA==
