@@ -19,5 +19,6 @@ jobs:
           username: Github
           avatar-url: https://cdn.discordapp.com/avatars/1036608820220272660/df91181b3f1cf0ef1592fbe18e0962d7.webp?size=256
           embed-title: PDF Build
-          embed-description: Build for commit ${{ github.sha }}.
+          embed-description: "SHA: ${{ github.sha }}"
+          embed-url: https://github.com/tobihans/end-year-project-report/commit/${{ github.sha }}
           filename: main.pdf
