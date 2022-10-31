@@ -18,5 +18,6 @@ jobs:
           webhook-url: ${{ secrets.WEBHOOK_URL }}
           username: Github
           avatar-url: https://cdn.discordapp.com/avatars/1036608820220272660/df91181b3f1cf0ef1592fbe18e0962d7.webp?size=256
-          content: Document build for commit {{ github.sha }}
+          embed-title: PDF Build
+          embed-description: Build for commit ${{ github.sha }}.
           filename: main.pdf
