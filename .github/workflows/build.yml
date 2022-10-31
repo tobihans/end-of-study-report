@@ -1,0 +1,22 @@
+name: Build LaTeX document
+on:
+  - push
+
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: dante-ev/latex-action@latest
+        with:
+          root_file: main.tex
+      - name: Send PDF to Discord
+        uses: tsickert/discord-webhook@v5.3.0
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          username: Github
+          avatar-url: https://cdn.discordapp.com/avatars/1036608820220272660/df91181b3f1cf0ef1592fbe18e0962d7.webp?size=256
+          content: Document build for commit {{ github.sha }}
+          filename: main.pdf
