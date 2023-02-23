@@ -29,9 +29,9 @@ Les acteurs intervenant dans notre système sont:
 
 La figure \ref{fig:use_case_diag} en fait l'illustration.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{use-cases-diag}
+  \includegraphics[width=0.75\linewidth]{use-cases-diag}
   \caption{Diagramme de cas d'utilisation du prototype StudX}
   \label{fig:use_case_diag}
 \end{figure}
@@ -126,25 +126,23 @@ Le diagramme de séquence décrit les interactions, dans l’espace temps, entre
 Les figures \ref{fig:auth_seq_diag}, \ref{fig:add_event_seq_diag} et \ref{fig:join_meet_seq_diag} illustrent les diagrammes de séquences pour les trois cas d’utilisation suscités.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.55\textwidth]{auth-sequence-diag}
+  \includegraphics[width=0.75\linewidth]{auth-sequence-diag}
   \caption{Diagramme de séquence du cas d'utilisation “S’authentifier”}
   \label{fig:auth_seq_diag}
 \end{figure}
 
-\newpage
-
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.55\textwidth]{add-event-sequence-diag}
+  \includegraphics[width=0.75\linewidth]{add-event-sequence-diag}
   \caption{Diagramme de séquence pour le cas d’utilisation “Ajouter un événement”}
   \label{fig:add_event_seq_diag}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.55\textwidth]{join-meet-sequence-diag}
+  \includegraphics[width=0.75\linewidth]{join-meet-sequence-diag}
   \caption{Diagramme de séquence pour le cas d’utilisation “Rejoindre une réunion”}
   \label{fig:join_meet_seq_diag}
 \end{figure}
@@ -153,10 +151,9 @@ Les figures \ref{fig:auth_seq_diag}, \ref{fig:add_event_seq_diag} et \ref{fig:jo
 Le diagramme de classe illustre les classes et les interfaces du système ainsi que les relations qui les lient. 
 Le diagramme à la figure \ref{fig:class_diag} en dessous décrit les diverses entités de notre prototype.
 
-\newpage
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{class-diag}
+  \includegraphics[width=0.75\linewidth]{class-diag}
   \caption{Diagramme de classe}
   \label{fig:class_diag}
 \end{figure}
@@ -169,9 +166,9 @@ l’architecture proposée reste très simplifiée et ne prend pas en compte des
 La figure de l'encart \ref{fig:system_design} présente les diverses composantes de notre architecture.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{studx-system-design}
+  \frame{\includegraphics[width=0.75\linewidth]{studx-system-design}}
   \caption{Architecture du système du prototype StudX}
   \label{fig:system_design}
 \end{figure}
@@ -198,9 +195,9 @@ Il offre un large éventail de fonctionnalités que l’on peut mettre en place 
 La figure \ref{fig:caddyfile} en présente un exemple, extrait du code de notre prototype.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\textwidth]{caddyfile}
+  \includegraphics[width=0.75\linewidth]{caddyfile}
   \caption{Example de configuration du proxy \textbf{Caddy}}
   \label{fig:caddyfile}
 \end{figure}
@@ -229,9 +226,9 @@ Elle doit disposer des caractéristiques suivantes :
 Pour ce faire, notre choix s’est porté sur \textbf{Django}, un framework du langage \textbf{Python} offrant une facilité de conception grâce aux nombreuses fonctionnalités déjà incluses par défaut. 
 Avec l’emploi de modules comme \textbf{Django Rest Framework}, il est possible de concevoir une \acrshort{api} totalement conforme aux recommandations de la spécification \acrshort{rest}.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.25\textwidth]{django-logo-positive}
+  \includegraphics[width=0.25\linewidth]{django-logo-positive}
   \caption{Logo du framework \textbf{Django}}
   \label{fig:django_logo}
 \end{figure}
@@ -254,7 +251,7 @@ Au vu des avantages qu’il présente, il correspond parfaitement aux besoins de
 
 \begin{figure}[h]
   \centering
-  \includegraphics[width=0.25\textwidth]{vue-logo}
+  \includegraphics[width=0.25\linewidth]{vue-logo}
   \caption{Logo du framework \textbf{Vue.js}}
   \label{fig:vue_logo}
 \end{figure}
@@ -269,9 +266,9 @@ La première préconise l’utilisation d’un schéma fixe représentant la str
 Notre choix s’est porté vers PostgreSQL, un système de gestion de base de données relationnel. 
 C’est d’ailleurs, le seul système Open Source, fournissant des fonctionnalités dignes de concurrencer les maisons d'édition comme Oracle.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.2\textwidth]{postgresql-logo}
+  \includegraphics[width=0.2\linewidth]{postgresql-logo}
   \caption{Logo de \textbf{PostgreSQL}}
   \label{fig:pg_logo}
 \end{figure}
@@ -284,9 +281,9 @@ Pour éviter celà, nous avons recours à \textbf{Celery}, un gestionnaire de fi
 Pour simplifier l’architecture, nous nous sommes servi du cache comme relai afin de déclencher des tâches.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.25\textwidth]{celery-logo}
+  \includegraphics[width=0.25\linewidth]{celery-logo}
   \caption{Logo de \textbf{Celery}}
   \label{fig:celery_logo}
 \end{figure}
@@ -303,9 +300,9 @@ une solution Open Source qui utilise la mémoire vive de la machine pour permett
 et en écriture très très rapide.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.25\textwidth]{redis-logo}
+  \includegraphics[width=0.25\linewidth]{redis-logo}
   \caption{Logo de \textbf{Redis}}
   \label{fig:redis_logo}
 \end{figure}
@@ -315,9 +312,9 @@ Dans le cadre de la conception d’un service synchronisé d'écriture, nous avo
 Il s’agit d’un éditeur Open Source offrant un large panel de fonctionnalités dont la collaboration entre utilisateurs. 
 Grâce à une documentation extensive, il est d’autant plus facile de l'intégrer à une application.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.2\textwidth]{tiptap-logo-version}
+  \includegraphics[width=0.2\linewidth]{tiptap-logo-version}
   \caption{Logo de \textbf{TipTap} et version actuelle}
   \label{fig:whiteboard_demo}
 \end{figure}
@@ -329,9 +326,9 @@ Les modifications effectuées touchent principalement l’interface utilisateur 
 La figure de l’encart \ref{fig:whiteboard_demo} en présente l’interface par défaut.
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.55\textwidth]{whiteboard-upstream-demo}}
+  \frame{\includegraphics[width=0.55\linewidth]{whiteboard-upstream-demo}}
   \caption{Interface par défaut de \textbf{whiteboard}}
   \label{fig:tiptap_logo_and_version}
 \end{figure}
@@ -351,9 +348,9 @@ Il offre d’excellentes performances, raison pour laquelle nous l’avons chois
 
 La figure \ref{fig:rust_syntax} est extrait du code source de notre prototype \textbf{StudX}, qui présente la syntaxe du langage \textbf{Rust},  et montre l'intégration des divers outils suscités.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \includegraphics[width=0.55\textwidth]{rust-syntax}
+  \includegraphics[width=0.55\linewidth]{rust-syntax}
   \caption{Syntaxe de \textbf{Rust}}
   \label{fig:rust_syntax}
 \end{figure}
