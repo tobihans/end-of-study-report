@@ -50,16 +50,26 @@ les apprenants peuvent interagir avec leurs pairs ainsi que le ou les enseignant
 En termes de classification des diverses formes de cours en ligne, Andreas Kaplan, 
 auteur du livre \textit{Contemporary Issues in Social Media Marketing} \cite{andreas_kaplan_classfication}, propose une approche simplifiée basée sur les facteurs 
 comme le temps, la distance et le nombre d’apprenants. 
-Le tableau ci-dessous, en fait un récapitulatif.
+Le tableau \ref{table:andreas_k_dot} en fait un récapitulatif.
 
-% \begin{table}[]
-%   \begin{tabular}{lllll}
-%    &  &  &  &  \\
-%    &  &  &  &  \\
-%    &  &  &  &  \\
-%    &  &  &  & 
-%   \end{tabular}
-% \end{table}
+\begin{table}[h!]
+  \centering
+\begin{tabular}{|l|l|l|}
+  \hline
+  Type de cours &  Nombre d’apprenants &  Type d’environnement \\
+  \hline
+  \acrfull{mooc} & illimité(en théorie) & asynchrone \\
+  \hline
+  \acrfull{smoc} & illimité(en théorie) & synchrone \\
+  \hline
+  \acrfull{spoc} & limité & asynchrone \\
+  \hline
+  \acrfull{ssoc} & limité & synchrone \\
+  \hline
+\end{tabular}
+\caption{Classfication des types de formations en ligne}
+\label{table:andreas_k_dot}
+\end{table}
 
 Notons que notre étude s'intéresse notamment aux environnements d’apprentissage synchrones, 
 avec le support d’un grand nombre d’apprenants.
@@ -75,6 +85,14 @@ et de données brutes, presque sans latence (moins d’une seconde),
 le tout dans un contexte hautement sécurisé. 
 Il s’agit en réalité, d’une collection de protocoles datant des années 2000. 
 Pour établir une connexion, il faut quatre étapes à savoir la signalisation, la connexion proprement dite, la sécurisation puis la communication.
+
+\newpage
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{webrtc-protocol-stack}}
+  \caption{Protocoles employés par la technologie WebRTC}
+  \label{fig:webrtc_protocols}
+\end{figure}
 
 La signalisation désigne le processus initial de mise en relation des pairs. 
 Sans ce processus, une machine quelconque n’a aucune idée de qui voudrait bien la contacter. 
@@ -119,28 +137,83 @@ tout en éliminant les barrières possibles.
 
 \subsection{Google Classroom}
 Google Classroom est un outil de la suite Google pour l'éducation. 
-A défaut de disposer d’un module de visioconférence, il s'intègre parfaitement avec Google Meet, à cette fin. 
-L’application offre une version gratuite et dispose d’une interface accessible. 
+A défaut de disposer d’un module de visioconférence, il s'intègre parfaitement avec Google Meet (figure \ref{fig:g_meet}), à cette fin. 
+L’application offre une version gratuite et dispose d’une interface accessible (figure \ref{fig:g_classrooms}). 
 Toutefois, pour les réunions en ligne, le nombre maximum de connexions possibles se limite à 500 participants. 
 Pour les entités universitaires dont l’effectif est considérable par classe, ceci pourrait présenter un désavantage. 
 Grâce à la version payante néanmoins, on peut mettre en place un live stream, pour permettre d'accéder au contenu de 
 la réunion sans toutefois pouvoir interagir avec les participants. 
-Le modèle de souscription aussi, basé sur le nombre d’utilisateurs risque d'entraîner des frais assez élevés.
+Mais le modèle de souscription (figure \ref{fig:g_pricing}), basé sur le nombre d’utilisateurs risque d'entraîner des frais assez élevés.
+
+% illustrations
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{g-classrooms}}
+  \caption{Page d'acceuil de Google Classrooms avec un cas réel de cours}
+  \label{fig:g_classrooms}
+\end{figure}
+
+\break
+
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{g-meet}}
+  \caption{Utilisation de Google Meet}
+  \label{fig:g_meet}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{gsuite-pricing-2023-02-17}}
+  \caption{Offres de souscription à la suite Google pour éducation}
+  \label{fig:g_pricing}
+\end{figure}
 
 \subsection{Zoom}
 Zoom est un outil de communication très performant, qui a la capacité de supporter un grand nombre d’utilisateurs. 
 Il dispose de fonctionnalités très utiles pour le déroulement de cours en ligne comme le partage d'écran ou le tableau virtuel. 
 Accéder à ces fonctionnalités dans le cadre d’une utilisation à grande échelle requiert une souscription et les offres de Zoom ne sont pas des plus simples. 
-En effet, Zoom dispose d’un panel large de services associés et donc, sans orientation, 
-il est possible de choisir une solution inadéquate en rapport avec le besoin.
+En effet, Zoom dispose d’un panel large de services associés (figure \ref{fig:zoom_pricing}) et donc, sans orientation, 
+il est possible de choisir une solution inadéquate en rapport avec le besoin, sans compter la perte financière.
 
+% illustrations
+\newpage
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=0.75\textwidth]{zoom-meeting-ui}
+  \caption{Interface de l'application Zoom}
+  \label{fig:zoom_meeting_ui}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{zoom-pricing-2023-02-17}}
+  \caption{Interface de l'application Zoom}
+  \label{fig:zoom_pricing}
+\end{figure}
 
 \subsection{Moodle}
 Moodle est un LMS Open Source populaire très connu et utilisé dans les entités de l’enseignement supérieur. 
 Il peut être hébergé ou utilisé en ligne. 
 Il offre un large panel de fonctionnalités et permet l'intégration de divers modules dont des modules de visio-conférence. 
-BigBlueButton est une solution Open source employée à cet effet. 
+BigBlueButton (figure \ref{fig:bbg_demo}) est une solution Open source employée à cet effet. 
 La mise en place requiert toutefois, une certaine expertise et du matériel spécifique, ce qui en limiterait la portabilité.
+
+
+% illustrations
+\newpage
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{moodle-demo-site}}
+  \caption{Démonstration des capacités de Moodle}
+  \label{fig:moodle_demo}
+\end{figure}
+
+\begin{figure}[h]
+  \centering
+  \frame{\includegraphics[width=0.75\textwidth]{big-blue-demo}}
+  \caption{Démonstration de BigBlueButton}
+  \label{fig:bbg_demo}
+\end{figure}
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
