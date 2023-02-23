@@ -15,6 +15,7 @@
 \usepackage[french, english]{babel}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % les couleurs avec les divers modes d'appels
 \usepackage{setspace}
+\usepackage{subcaption}
 \usepackage[]{graphicx} % pour insérer des images
 \usepackage{amsmath}
 \usepackage{amsfonts}

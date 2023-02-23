@@ -12,7 +12,7 @@ Elle offre la possibilité de se connecter ou de s'inscrire.
 
 \begin{figure}[h]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/login}}
+  \frame{\includegraphics[width=0.75\textwidth]{prototype/login}}
   \caption{Page d'authentification de \textbf{StudX}}
   \label{fig:proto_auth}
 \end{figure}
@@ -25,7 +25,7 @@ La figure \ref{fig:proto_calendar_view} présente le calendrier,qui présente to
 
 \begin{figure}[h]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/calendar-view}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/calendar-view}}
   \caption{Calendrier des planifications}
   \label{fig:proto_calendar_view}
 \end{figure}
@@ -36,7 +36,7 @@ l’utilisateur peut ajouter un événement au calendrier en suivant le formulai
 
 \begin{figure}[h]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/add-event-form}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/add-event-form}}
   \caption{Calendrier des planifications}
   \label{fig:add_event}
 \end{figure}
@@ -46,7 +46,7 @@ Pour y accéder par la suite, les utilisateurs peuvent consulter les détails du
 
 \begin{figure}[h]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/event-detail}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/event-detail}}
   \caption{Détails d'un événement}
   \label{fig:event_details}
 \end{figure}
@@ -54,76 +54,74 @@ Pour y accéder par la suite, les utilisateurs peuvent consulter les détails du
 \subsection{Sessions en ligne}
 Les événements incluant un lien donnent accès à une session en ligne que
 peuvent rejoindre tous les participants disposant du lien.
-
-Les figures \ref{fig:single_user} et \ref{fig:many_users} présentent à quoi ressemble l’interface par défaut. 
-Elles présentent, en fait, la grille des participants et l’interface de contrôle.
-
-
-\begin{figure}[h]
-  \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/user-single-in-room}}
-  \caption{Grille des participants avec un seul participant présent}
-  \label{fig:single_user}
-\end{figure}
-
-
-\begin{figure}[h]
-  \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/user-with-participants-in-room}}
-  \caption{Grille des participants avec plus d'un utilisateur}
-  \label{fig:many_users}
-\end{figure}
-
-\newpage
+La figure \ref{fig:participants_grids} présente à quoi ressemble l’interface par défaut, avec la grille des participants et les options de contrôle. 
 Outre la voix, les participants ont la possibilité d’interagir entre eux via des messages écrits (figure \ref{fig:room_chat}).
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/room-chat}}
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.6\linewidth]{prototype/user-single-in-room}}
+      \caption{Un participant}
+  \end{subfigure}
+  \vskip\baselineskip
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.6\linewidth]{prototype/user-with-participants-in-room}}
+      \caption{Deux participants}
+  \end{subfigure}
+  \caption{Grille des participants et boutons de contrôle.}
+  \label{fig:participants_grids}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \frame{\includegraphics[width=0.65\linewidth]{prototype/room-chat}}
   \caption{Messagerie instantannée intégrée à \textbf{StudX}}
   \label{fig:room_chat}
 \end{figure}
 
 Plusieurs autres fonctionnalités sont exploitables. 
 L’une d’elles est le partage d'écran. Pour illustrer, nous nous sommes servis de deux appareils avec 
-l’un faisant le partage, comme le montre les figures \ref{fig:sharing_screen} et \ref{fig:viewing_screen}.
+l’un faisant le partage, comme le montre la figure \ref{fig:screenshare}.
 
-\newpage
-\begin{figure}[h]
-  \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/user-sharing-screen}}
-  \caption{Partage d'écran}
-  \label{fig:sharing_screen}
-\end{figure}
 
-\newpage
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/user-viewing-screen}}
-  \caption{Visualisation de l'écran partagé}
-  \label{fig:viewing_screen}
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.6\linewidth]{prototype/user-sharing-screen}}
+      \caption{Participant faisant un partage d'écran.}
+  \end{subfigure}
+  \vskip\baselineskip
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.6\linewidth]{prototype/user-viewing-screen}}
+      \caption{Visualisation du partage d'écran}
+  \end{subfigure}
+  \caption{Partage d'écran.}
+  \label{fig:screenshare}
 \end{figure}
 
 Les participants disposent également d’un whiteboard, 
 c'est-à- dire un tableau virtuel, pour effectuer des illustrations. 
 Le contenu est synchronisé entre tous les participants. 
-La figure 3.10 fait une démonstration de ladite fonction.
+La figure \ref{fig:whiteboard} fait une démonstration de ladite fonction.
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/whiteboard}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/whiteboard}}
   \caption{Tableau virtuel}
   \label{fig:whiteboard}
 \end{figure}
 
 On peut également percevoir sur l’image, les modifications apportées au projet Open Source qui a servi de base au développement de cette fonctionnalité.
+L’application dispose également d’un dispositif de notes intégré, que nous qualifions de \textbf{Writepad}. La figure \ref{fig:writepad} en fait la présentation.
 
-L’application dispose également d’un dispositif de notes intégré, que nous qualifions de \textbf{Writepad}. La figure \ref{fig:writepad} la présente.
 
-
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/wrritepad}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/wrritepad}}
   \caption{Outil de note synchronisé}
   \label{fig:writepad}
 \end{figure}
@@ -131,70 +129,71 @@ L’application dispose également d’un dispositif de notes intégré, que nou
 Les fonctions suscitées rendent inaccessible la grille des participants. 
 Mais il est toujours possible de pourvoir y accéder dans la même section que la messagerie, comme le montre la figure \ref{fig:participants_aside}.
 
-\newpage
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/participants}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/participants}}
   \caption{Liste des participants}
   \label{fig:participants_aside}
 \end{figure}
 
-Enfin, chaque utilisateur a la possibilité de quitter la réunion. Si par mégarde, il essaie de recharger par exemple, l’onglet, une confirmation est requise (si le navigateur supporte cette fonctionnalité). 
-Les figures \ref{fig:confirm_exit} et \ref{fig:exited} en font l'illustration.
+Enfin, chaque utilisateur a la possibilité de quitter la réunion. Si par mégarde, il essaie de recharger par exemple, l’onglet, une confirmation est requise (si le navigateur supporte cette fonctionnalité), comme le montre la figure \ref{fig:exit}.
 
-\newpage
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/confirm-exit}}
-  \caption{Confirmation de déconnexion}
-  \label{fig:confirm_exit}
-\end{figure}
-
-\begin{figure}[h]
-  \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/no-active-call}}
-  \caption{Page de redirection après déconnexion}
-  \label{fig:exited}
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.525\linewidth]{prototype/confirm-exit}}
+      \caption{Confirmation de déconnexion}
+  \end{subfigure}
+  \vskip\baselineskip
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.525\linewidth]{prototype/no-active-call}}
+      \caption{Page de redirection après déconnexion}
+  \end{subfigure}
+  \caption{Processus de déconnexion.}
+  \label{fig:exit}
 \end{figure}
 
 \subsection{Autres fonctionnalités}
 Dans le but d'améliorer l'expérience utilisateur, nous avons jugé utile d’ajouter quelques fonctionnalités outre celles initialement visées. 
 Parmi elles figurent le mode sombre et la mise en place d’un tutoriel interactif expliquant les diverses composantes de notre application. 
 
-\newpage
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/user-onboarding}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/user-onboarding}}
   \caption{Tutoriel interactif d’introduction à StudX}
   \label{fig:onboarding}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/wip-dark-mode}}
+  \frame{\includegraphics[width=0.75\linewidth]{prototype/wip-dark-mode}}
   \caption{Mode sombre}
   \label{fig:dark_mode}
 \end{figure}
 
 Les administrateurs de la plateforme disposent également d’un accès aux paramètres de 
-l'organisation qu’ils dirigent et peuvent ainsi ajouter ou retirer des membres (figures \ref{fig:settings_one} et \ref{fig:settings_two}).
+l'organisation qu’ils dirigent et peuvent ainsi ajouter ou retirer des membres (figure \ref{fig:settings}).
 
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/settings}}
-  \caption{Paramètres généraux d'une organisation}
-  \label{fig:settings_one}
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.6\linewidth]{prototype/settings}}
+      \caption{Paramètres généraux.}
+  \end{subfigure}
+  \vskip\baselineskip
+  \begin{subfigure}[b]{\textwidth}
+      \centering
+      \frame{\includegraphics[width=0.6\linewidth]{prototype/settings-end}}
+      \caption{Gestion des membres.}
+  \end{subfigure}
+  \caption{Paramètres d'une organisation.}
+  \label{fig:settings}
 \end{figure}
 
-\begin{figure}[h]
-  \centering
-  \frame{\includegraphics[width=0.85\textwidth]{prototype/settings-end}}
-  \caption{Paramètres de gestion des membres d'une organisation}
-  \label{fig:settings_two}
-\end{figure}
-
-\newpage
 \section{Perspectives}
 Le prototype StudX présente un ensemble de fonctionnalités utiles pour le déroulement de classes virtuelles. 
 Toutefois, il présente certaines limites, outre les choix de conception comme l’absence de flux vidéo. 
