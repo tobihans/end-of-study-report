@@ -42,9 +42,84 @@ d’utilisation, dans le but d’apporter plus d'éclaircissements.
 Ci-dessous, sont présentées les descriptions textuelles des cas “S’authentifier”, “Ajouter un événement” et “Rejoindre une réunion”.
 
 \subsubsection{Description textuelle du cas d’utilisation “S’authentifier”}
+\textbf{Titre} : S’authentifier\newline
+\textbf{Objectif} : Authentifier un utilisateur afin qu’il accède à la plateforme\newline
+\textbf{Acteurs} : Étudiant ou Enseignant ou Administrateur\newline
+\textbf{Pré-conditions} : 
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item l’utilisateur dispose d’un compte et est admis dans au moins une organisation.
+\end{itemize}
+\textbf{Séquence nominale} :
+\begin{enumerate}[noitemsep,topsep=0pt]
+  \item l’utilisateur remplit le formulaire de connexion ;
+  \item le système authentifie l’utilisateur ;
+  \item le système redirige l’utilisateur vers la page la page d'accueil de l’organisation la plus récente.
+\end{enumerate}
+\textbf{Post-conditions} : 
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item l’utilisateur dispose d’une session active.
+\end{itemize}
+\textbf{Enchaînements alternatifs} :
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item A1: Identifiants incorrects\newline
+    L'enchaînement démarre au point 2.
+
+  \begin{enumerate}[noitemsep,topsep=0pt]
+    \setcounter{enumi}{1}
+    \item Le système renvoie l’utilisateur vers la page de connexion avec une notification. Ce dernier effectue à nouveau la saisie.
+  \end{enumerate}
+
+  \item A2: L’utilisateur n’appartient à aucune organisation.
+    L'enchaînement prend départ au point 3.
+
+  \begin{enumerate}[noitemsep,topsep=0pt]
+    \setcounter{enumi}{2}
+    \item Le système redirige l’utilisateur vers une page 404.
+  \end{enumerate}
+\end{itemize}
+
 
 \subsubsection{Description textuelle du cas d’utilisation “Ajouter un événement”}
+\textbf{Titre} : Ajouter un événement\newline
+\textbf{Objectif} : Planifier les cours en ligne en ajoutant des événements au calendrier\newline
+\textbf{Acteurs} : Enseignant ou Administrateur\newline
+\textbf{Pré-conditions} : 
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item l’utilisateur est authentifié en tant qu’enseignant ou administrateur.
+\end{itemize}
+\textbf{Séquence nominale} :
+\begin{enumerate}[noitemsep,topsep=0pt]
+  \item L’utilisateur accède au calendrier ;
+	\item Le système renvoie les événements actuellement programmes ;
+	\item L’utilisateur remplit et soumet un formulaire de création ;
+	\item Le système enregistre l'événement et les détails associés ;
+	\item Le système notifie les participants concernés.
+\end{enumerate}
+\textbf{Post-conditions} : 
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item L’utilisateur accède à l'événement dans son calendrier.
+\end{itemize}
+
 \subsubsection{Description textuelle du cas d’utilisation “Rejoindre une réunion”}
+\textbf{Titre} : Rejoindre une réunion\newline
+\textbf{Objectif} : Tenir une session de classe en ligne\newline
+\textbf{Acteurs} : Étudiant ou Enseignant ou Administrateur\newline
+\textbf{Pré-conditions} : 
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item l’utilisateur est authentifié.
+\end{itemize}
+\textbf{Séquence nominale} :
+\begin{enumerate}[noitemsep,topsep=0pt]
+  \item  l’utilisateur consulte le calendrier ;
+	\item le système affiche les divers événements programmes ;
+	\item l’utilisateur accède aux détails d’un événement ;
+	\item l’utilisateur clique sur le lien pour rejoindre la reunion ;
+	\item le système connecté l’utilisateur aux participants présents.
+\end{enumerate}
+\textbf{Post-conditions}: 
+\begin{itemize}[noitemsep,topsep=0pt]
+  \item L’utilisateur est en mesure d’interagir, de communiquer avec les participants.
+\end{itemize}
 
 \subsection{Diagramme de séquence}
 Le diagramme de séquence décrit les interactions, dans l’espace temps, entre objets dans le cadre des scénarii évoqués au niveau des cas d’utilisations. 
@@ -310,7 +385,7 @@ Le tableau \ref{table:dev_tools} présente une liste non exhaustive des outils d
   \hline
   Manjaro Linux & \multicolumn{2}{l|}{22.0.4} \\
   \hline
-  Fedora & \multicolumn{2}{l|}{0.0.0} \\
+  Fedora & \multicolumn{2}{l|}{36} \\
   \hline
   \multicolumn{3}{|c|}{Logiciels} \\
   \hline
