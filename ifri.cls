@@ -413,7 +413,7 @@ frame=leftline
 %Générer les index
 \makeindex
 %Activate glossary commands
-\makeglossaries
+\makenoidxglossaries
 
 \author{}
 \date{}

@@ -1,39 +1,99 @@
 % WebRTC related
 
-% \newacronym{ip}{IP}{Internet Protocol}
-\newglossaryentry{ip}{type=\acronymtype, name={IP}, description={Internet Protocol},see=[Glossaire:]{ip_def}}
+\newacronym{webrtc}{WebRTC}{Web Real-Time Communication}
+
+\newglossaryentry{udp}{type=\acronymtype, name={UDP}, description={User Datagram Protocol\glsadd{udp_def}},see=[:]{udp_def}}
+\newglossaryentry{udp_def}
+{
+  name=UDP,
+  description={Protocole de transmission de données sans connexion (sous forme de datagrammes) entre deux entités.}
+}
+
+\newglossaryentry{ip}{type=\acronymtype, name={IP}, description={Internet Protocol\glsadd{ip_def}},see=[:]{ip_def}}
 \newglossaryentry{ip_def}
 {
   name=IP,
-  description={Protocole d'identification des machines dans un réseau}
+  description={Famille de protocoles de communication de réseaux informatiques conçus pour être utilisés sur Internet.}
 }
 
-\newacronym{p2p}{P2P}{Peer To Peer}
+\newglossaryentry{p2p}{type=\acronymtype, name=P2P, description={Peer To Peer\glsadd{p2p_def}},see=[:]{p2p_def}}
+\newglossaryentry{p2p_def}
+{
+  name=P2P,
+  description={Modèle d'échange en réseau où chaque entité est à la fois client et serveur.}
+}
 
-\newacronym{webrtc}{WebRTC}{Web Real-Time Communication}
-\newacronym{ice}{ICE}{Interactive Connectivity Establishment}
-\newacronym{dsp}{SDP}{Session Description Protocol}
-\newacronym{nat}{NAT}{Network Address Translation}
-\newacronym{dtls}{DTLS}{Datagram Transport Layer Security}
-\newacronym{srtp}{SRTP}{Secure Real-Time Transport Protocol}
-\newacronym{stun}{STUN}{Session Traversal Utilities for NAT}
-\newacronym{turn}{TURN}{Traversal Using Relays around NAT}
-\newacronym{rtp}{RTP}{Real-time Transport Protocol}
-\newacronym{sctp}{SCTP}{Stream Control Transmission Protocol}
+\newglossaryentry{ice}{type=\acronymtype, name=ICE, description={Interactive Connectivity Establishment\glsadd{ice_def}}, see=[:]{ice_def}}
+\newglossaryentry{ice_def}
+{
+  name=ICE,
+  description={Protocole utilisé dans les réseaux informatiques pour trouver des moyens permettant à deux ordinateurs de se parler aussi directement que possible dans le cadre d'un réseau \gls{p2p}.}
+}
+
+\newglossaryentry{sdp}{type=\acronymtype, name=SDP, description={Session Description Protocol\glsadd{sdp_def}}, see=[:]{sdp_def}}
+\newglossaryentry{sdp_def}
+{
+  name=SDP,
+  description={Protocole de communication de description de paramètres d'initialisation d'une session de diffusion en flux.}
+}
+
+\newglossaryentry{nat}{type=\acronymtype, name=NAT, description={Network Address Translation\glsadd{nat_def}}, see=[:]{nat_def}}
+\newglossaryentry{nat_def}
+{
+  name=NAT,
+  description={Méthode de conversion d'un espace d'adresses \gls{ip} en un autre en modifiant les informations relatives aux adresses de réseau dans l'en-tête \gls{ip} des paquets pendant qu'ils transitent par un dispositif d'acheminement du trafic.}
+}
+
+\newglossaryentry{dtls}{type=\acronymtype, name=DTLS, description={Datagram Transport Layer Security\glsadd{dtls_def}}, see=[:]{dtls_def}}
+\newglossaryentry{dtls_def}
+{
+  name=DTLS,
+  description={Protocole qui fournit une sécurisation des échanges basés sur des protocoles en mode datagramme.}
+}
+
+\newglossaryentry{srtp}{type=\acronymtype, name=SRTP, description={Secure Real-Time Transport Protocol\glsadd{srtp_def}}, see=[:]{srtp_def}}
+\newglossaryentry{srtp_def}
+{
+  name=SRTP,
+  description={Protocole employant le cryptage et l'authentification pour minimiser le risque d'attaques par déni de service et les failles de sécurité du protocole \gls{rtp}.}
+}
+
+\newglossaryentry{stun}{type=\acronymtype, name=STUN, description={Session Traversal Utilities for NAT\glsadd{stun_def}}, see=[:]{stun_def}}
+\newglossaryentry{stun_def}
+{
+  name=STUN,
+  description={Protocole client-serveur permettant à un client \gls{udp} situé derrière un routeur \gls{nat} de découvrir son adresse \gls{ip} publique ainsi que le type de routeur \gls{nat} derrière lequel il est.}
+}
+
+\newglossaryentry{turn}{type=\acronymtype, name=TURN, description={Traversal Using Relays around NAT\glsadd{turn_def}}, see=[:]{turn_def}}
+\newglossaryentry{turn_def}
+{
+  name=TURN,
+  description={Protocole qui aide à traverser les traducteurs d'adresses réseau ou les pare-feu pour les applications multimédias.}
+}
+
+\newglossaryentry{sctp}{type=\acronymtype, name=SCTP, description={Stream Control Transmission Protocol\glsadd{sctp_def}}, see=[:]{sctp_def}}
+\newglossaryentry{sctp_def}
+{
+  name=SCTP,
+  description={Protocole de transmission fiable des messages de télécommunication à travers des réseaux \gls{ip}.}
+}
+
+\newglossaryentry{rtp}{type=\acronymtype, name=RTP, description={Real-time Transport Protocol\glsadd{rtp_def}}, see=[:]{rtp_def}}
+\newglossaryentry{rtp_def}
+{
+  name=RTP,
+  description={Protocole réseau qui décrit comment transmettre divers médias (audio, vidéo) d'un point de terminaison à un autre en temps réel. }
+}
+
 
 % Courses related
 \newacronym{mooc}{MOOC}{Massive Open Online Courses}
+
 \newacronym{smoc}{SMOC}{Synchronous Massive Online Courses}
+
 \newacronym{spoc}{SPOC}{Small Private Online Courses}
+
 \newacronym{ssoc}{SSOC}{Synchronous Small Online Courses}
 
-\newglossaryentry{acroglo}{type=\acronymtype, name={acroglo}, description={A la fois dans les deux\glsadd{acroglog}},see=[Glossaire:]{acroglog}
-}
 
-\newglossaryentry{acroglog}{name=acroglo, description={A la fois dans les deux.}}
-
-\newglossaryentry{glossaire}
-{
-  name=glossaire,
-  description={Ici se trouve le contenu du glossaire}
-}
