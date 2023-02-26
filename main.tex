@@ -3,7 +3,9 @@
 \usepackage{fancyhdr}
 \usepackage{makecell}
 \usepackage{enumitem}
+\usepackage{multibib}
 
+\newcites{book}{Bib}
 \graphicspath{ {./images/} }
 \setlength{\arrayrulewidth}{0.5mm}
 \setlength{\tabcolsep}{5pt}
@@ -40,11 +42,11 @@
 
 
 \hypersetup{
- pdftitle={Conception d'un SaaS pour les cours en ligne en milieu universitaire},
- pdfauthor={Hans TOGNON},
- pdfsubject={--},
- pdfkeywords={Sass, Studx, WebRTC, online classes}
- }
+pdftitle={Conception d'un SaaS pour les cours en ligne en milieu universitaire},
+pdfauthor={Hans TOGNON},
+pdfsubject={--},
+pdfkeywords={Sass, Studx, WebRTC, online classes}
+}
 
 \color{bookColor}
 
@@ -132,9 +134,13 @@
 \lhead[]{} \rhead[]{} \chead[]{}
 
 %%biblio
+\addcontentsline{toc}{chapter}{Webographie}
+\bibliographystylebook{plain}
+\bibliographybook{bibliography}
+
 \addcontentsline{toc}{chapter}{Bibliographie}
-\bibliographystyle{abbrv}
-\bibliography{biblio}
+\bibliographystyle{plain}
+\bibliography{bibliography}
 
 
 %\include{annexe}
