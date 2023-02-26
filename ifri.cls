@@ -10,8 +10,7 @@
 %  chargement des paquetages     %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[T1]{fontenc}
-\usepackage{ucs}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[french, english]{babel}
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % les couleurs avec les divers modes d'appels
 \usepackage{setspace}
@@ -32,19 +31,13 @@
 \do\]\do\)\do\,\do\?\do\'\do+\do\=\do\#\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z%
 \do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z%
 \do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\%\do\=}%
-%\usepackage{color} % les couleurs avec les divers modes d'appels
 % activer tous les liens
 \usepackage[ 
             colorlinks=true,%activer la coloration des liens 
             linkcolor=RoyalBlue,% personaliser la couleur des liens simple
             ]{hyperref}
 
-%\usepackage[nonumberlist, acronym, toc]{glossaries} %Mise en forme du glossaire
 \usepackage[acronym, toc]{glossaries} %Mise en forme du glossaire
-%\usepackage[nonumberlist,style=altlist]{glossaries}
-% \renewcommand*{\glsgroupskip}{}
-% \renewcommand*{\glsseeformat}[3][\seename]{%
-% (\xmakefirstuc{#1} \glsseelist{#2}.)}
  
 \usepackage{fancyhdr}
 \usepackage{lastpage} % la dernière page
@@ -92,24 +85,7 @@ frame=leftline
 \definecolor{bookColor}{cmyk}{0 , 0  , 0   , 0.98}  % 0.90\% of black
 \usepackage{multirow} % pour les rowspan des tableaux
 \usepackage{longtable} % tableaux sur plusieurs pages
-%\usepackage[chapter]{algorithm}
-%\usepackage[french]{algorithm2e}
-\usepackage{tocbibind}
-
-\usepackage[french,linesnumbered,lined,boxed,commentsnumbered,ruled]{algorithm2e}
-\usepackage{algpseudocode} % algorithmic
-%\usepackage{algorithmic}
-
-%\usepackage{auto-pst-pdf} 
 \usepackage{pstricks,pst-node,pst-tree}
-
-%%%%%%%%%% personnalisation des algos
-
-%\floatname{algorithm}{Algorithme}
-% changement du style des commentaires
-%\renewcommand{\algorithmiccomment}[1]{// #1}
-%\let\mylistof\listof
-%\renewcommand\listof[2]{\mylistof{algorithm}{\textbf{Liste des algorithmes}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Definition des variables %
@@ -151,8 +127,6 @@ frame=leftline
     \colorbox{lgray}%
   }%
   \MakeFramed{\advance\hsize-\width\FrameRestore}%
-  %\noindent\hspace{-4.55pt}% desactiver l'identation
-  %\noindent
   \begin{adjustwidth}{}{7pt}%
   \vspace{0pt}\vspace{0pt}%
 }
@@ -191,24 +165,6 @@ frame=leftline
 
 % saut de page aprs le titre du chapitre
 \def\chapitre#1{\chapter{#1}\newpage}
-% compteur de partie sous la forme A, B, ...
-%\renewcommand\thepart{\Alph{part}}
-% compteur de chapitre sous la forme 1), 2) ...
-%\renewcommand{\thechapter}{\arabic{chapter}}
-% compteur de section sous la forme I, II, ...
-%\renewcommand{\thesection}{\Roman{section}}
-% compteur de section sous la forme I, II...
-%\renewcommand{\thesection}{\Roman{section}}
-% compteur de sous-section sous la forme 1), 2)...
-%\renewcommand{\thesubsection}{\arabic{subsection})}
-% compteur de sous-sous-section sous la forme 1), 2)...
-%\renewcommand{\thesubsubsection}{\arabic{subsubsection})}
-%differente pagination pour les tableaux
-%\renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}
-%différente pagination pour les figures
-%\renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
-%différente pagination la table des matières
-%\renewcommand{\glsaddall}{\arabic{chapter}.\arabic{glossary}}
 
 \newcommand\dedicace{\chapter*{Dédicace}\addcontentsline{toc}{chapter}{Dédicace}}
 \newcommand\remerciements{\chapter*{Remerciements}\addcontentsline{toc}{chapter}{Remerciements}}
@@ -217,20 +173,13 @@ frame=leftline
 \newcommand\resume{\chapter*{}\addcontentsline{toc}{chapter}{Résumé}}
 \newcommand\annexe{\chapter*{}\addcontentsline{toc}{chapter}{Annexes}}
 
-%\renewcommand\glsaddall{\chapter*{Glossaire}\addcontentsline{toc}{chapter}{Glossaire}}
-
-%\newcommand\resume{\subsubsection*{}\addcontentsline{toc}{chapter}{Résumé / Abstract}}
-
 \renewcommand\printglossaries{\chapter*{Glossaire}\addcontentsline{toc}{chapter}{Glossaire}}
-
-%\renewcommand\printsigles{\chapter*{Sigles et Abréviations}\addcontentsline{toc}{chapter}{Sigles et Abréviations}}
 
 
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 
-%\fancyfoot[R]{\thepage / \pageref{LastPage}}
 \fancyfoot[C]{\thepage}
 \fancyhead[L]{\tiny \leftmark}
 \fancyhead[R]{\scriptsize \rightmark}
@@ -252,30 +201,11 @@ frame=leftline
      }
 \fi
 
-
-% \newglossarystyle{clong}{%
-%  \renewenvironment{theglossary}%
-%      {\begin{longtable}{p{.3\linewidth}p{\glsdescwidth}}}%
-%      {\end{longtable}}%
-%   \renewcommand*{\glossaryheader}{}%
-%   \renewcommand*{\glsgroupheading}[1]{}%
-%   \renewcommand*{\glossaryentryfield}[5]{%
-%     \glstarget{##1}{##2} & ##3\glspostdescription\space ##5\\}%
-%   \renewcommand*{\glossarysubentryfield}[6]{%
-%      & \glstarget{##2}{\strut}##4\glspostdescription\space ##6\\}%
-%   %\renewcommand*{\glsgroupskip}{ & \\}%
-% }
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % modification de la toc          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \RequirePackage{tocloft}
-%\renewcommand{\cftchapnumwidth}{\setlength{0.7cm}}
-%\renewcommand{\cftsecnumwidth}{\setlength{0.7cm}}
-%\renewcommand{\cftsubsecnumwidth}{\setlength{0.7cm}}
-%\renewcommand{\cftsubsubsecnumwidth}{\setlength{0.7cm}}
 
 %%%%%%%%% commenter les lignes suivantes pour avoir %%%%%%%%%%%%%%%
 %%%%%%%%%       les hauts de page en majuscule      %%%%%%%%%%%%%%%
@@ -325,7 +255,7 @@ frame=leftline
 \usepackage{nomencl}
 \renewcommand{\nomname}{Sigles et abréviations}
 \makenomenclature 
-%\newcommand\resume{\chapter*{}\addcontentsline{toc}{chapter}{Résumé/Abstract}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% les éléments dz la page de garde%%%%%%%
@@ -334,7 +264,6 @@ frame=leftline
 \newcommand{\listofalgorithmes}{\tocfile{\listalgorithmcfname}{loa}}
 
 \newcommand{\pageDeGarde}{
-%\pagecolor{lgray}
 
 \begin{titlepage}
 \begin{center}
@@ -372,7 +301,6 @@ frame=leftline
 \end{flushleft}
 \end{tabular}
 \end{flushleft}
-%\vfill
 \begin{center}
 
 {\textbf{{\Huge MÉMOIRE \\}}}
@@ -390,9 +318,7 @@ frame=leftline
 {\@etudiant{}}\\
 \vspace{1cm}
 
-%{\rule{\textwidth}{0.2mm}}\vspace{3mm} \\
 {{\Huge {\bf \centering \@titreDuMemoire}}}\\
-%{\rule{\textwidth}{0.2mm}}\\
 \vspace{2cm}
 { \textbf{Sous la supervision } : \\}
 { \@encadrants{}}\\

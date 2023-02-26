@@ -3,9 +3,11 @@
 \usepackage{fancyhdr}
 \usepackage{makecell}
 \usepackage{enumitem}
-\usepackage{multibib}
+\usepackage[backend=biber]{biblatex}
 
-\newcites{book}{Bib}
+\addbibresource{bibliography.bib}
+% \addbibresource{webography.bib}
+% \newcites{book}{Bib}
 \graphicspath{ {./images/} }
 \setlength{\arrayrulewidth}{0.5mm}
 \setlength{\tabcolsep}{5pt}
@@ -134,14 +136,9 @@ pdfkeywords={Sass, Studx, WebRTC, online classes}
 \lhead[]{} \rhead[]{} \chead[]{}
 
 %%biblio
-\addcontentsline{toc}{chapter}{Webographie}
-\bibliographystylebook{plain}
-\bibliographybook{bibliography}
-
-\addcontentsline{toc}{chapter}{Bibliographie}
-\bibliographystyle{plain}
-\bibliography{bibliography}
-
+\nocite{*} % include entries from the bib database that were not cited
+\printbibliography[heading=bibintoc, nottype=online, title={Bibliographie}]{}
+\printbibliography[heading=bibintoc, type=online, title={Webographie}]{}
 
 %\include{annexe}
 
