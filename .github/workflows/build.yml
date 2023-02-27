@@ -13,7 +13,7 @@ jobs:
         with:
           root_file: main.tex
           args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape
-          extra_system_packages: python2 python-pygments
+          extra_system_packages: python python-pygments
       - name: Rename the output file
         run: mv main.pdf build-${{ github.sha }}.pdf
       - name: Send PDF to Discord
