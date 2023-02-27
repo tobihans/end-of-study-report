@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Compile LaTeX document
         uses: dante-ev/latex-action@latest
         with:
           root_file: main.tex
           args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape
-          extra_system_packages: python-pygments
+          extra_system_packages: python2 python-pygments
       - name: Rename the output file
         run: mv main.pdf build-${{ github.sha }}.pdf
       - name: Send PDF to Discord
