@@ -31,7 +31,7 @@ La figure \ref{fig:use_case_diag} en fait l'illustration.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\linewidth]{use-cases-diag}
+  \includegraphics[width=\linewidth]{use-cases-diag}
   \caption{Diagramme de cas d'utilisation du prototype StudX}
   \label{fig:use_case_diag}
 \end{figure}
@@ -128,21 +128,21 @@ Les figures \ref{fig:auth_seq_diag}, \ref{fig:add_event_seq_diag} et \ref{fig:jo
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\linewidth]{auth-sequence-diag}
+  \includegraphics[width=\linewidth]{auth-sequence-diag}
   \caption{Diagramme de séquence du cas d'utilisation “S’authentifier”}
   \label{fig:auth_seq_diag}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\linewidth]{add-event-sequence-diag}
+  \includegraphics[width=\linewidth]{add-event-sequence-diag}
   \caption{Diagramme de séquence pour le cas d’utilisation “Ajouter un événement”}
   \label{fig:add_event_seq_diag}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\linewidth]{join-meet-sequence-diag}
+  \includegraphics[width=\linewidth]{join-meet-sequence-diag}
   \caption{Diagramme de séquence pour le cas d’utilisation “Rejoindre une réunion”}
   \label{fig:join_meet_seq_diag}
 \end{figure}
@@ -153,7 +153,7 @@ Le diagramme à la figure \ref{fig:class_diag} en dessous décrit les diverses e
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\linewidth]{class-diag}
+  \includegraphics[width=\linewidth]{class-diag}
   \caption{Diagramme de classe}
   \label{fig:class_diag}
 \end{figure}
@@ -168,7 +168,7 @@ La figure de l'encart \ref{fig:system_design} présente les diverses composantes
 
 \begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.75\linewidth]{studx-system-design}}
+  \frame{\includegraphics[width=\linewidth]{studx-system-design}}
   \caption{Architecture du système du prototype StudX}
   \label{fig:system_design}
 \end{figure}
@@ -197,7 +197,7 @@ La figure \ref{fig:caddyfile} en présente un exemple, extrait du code de notre 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.75\linewidth]{caddyfile}
+  \includegraphics[width=\linewidth]{caddyfile}
   \caption{Example de configuration du proxy \textbf{Caddy}}
   \label{fig:caddyfile}
 \end{figure}
@@ -328,7 +328,7 @@ La figure de l’encart \ref{fig:whiteboard_demo} en présente l’interface par
 
 \begin{figure}[H]
   \centering
-  \frame{\includegraphics[width=0.55\linewidth]{whiteboard-upstream-demo}}
+  \frame{\includegraphics[width=0.85\linewidth]{whiteboard-upstream-demo}}
   \caption{Interface par défaut de \textbf{whiteboard}}
   \label{fig:tiptap_logo_and_version}
 \end{figure}
@@ -347,8 +347,6 @@ C’est un framework toutes batteries incluses qui supporte nativement bien de f
 Il offre d’excellentes performances, raison pour laquelle nous l’avons choisi, pour la gestion du signalement lors des connexions \acrshort{webrtc}.
 
 Ci-dessous est un extrait du code source de notre prototype \textbf{StudX}, qui présente la syntaxe du langage \textbf{Rust},  et montre l'intégration des divers outils suscités:
-
-\newpage
 \inputminted{rust}{2-partie/main.rs}
 
 \subsection{Outils de développement}
@@ -401,4 +399,6 @@ Le tableau \ref{table:dev_tools} présente une liste non exhaustive des outils d
 \section*{Conclusion}
 Ce chapitre a permis de passer en revue les choix de conception ainsi que les choix techniques effectués
 pour la mise en œuvre de notre prototype d’application. 
-Le chapitre suivant présentera la solution qui en résulte.
+Ceci pose des fondations robustes à l'implémentation de ladite solution. En suivant les décisions techniques prises, 
+nous avons construit notre prototype. 
+Le but du chapitre suivant sera de le présenter puis de faire un bilan d'évaluation.

@@ -22,8 +22,10 @@ async fn main() -> std::io::Result<()> {
         .expect("ADDRESS is invalid");
 
     // Application State
-    let redis_url = env::var("REDIS_URL").expect("REDIS_URL env var is not set");
-    let redis = redis::Client::open(redis_url).expect("Unable to connect to Redis");
+    let redis_url = env::var("REDIS_URL")
+        .expect("REDIS_URL env var is not set");
+    let redis = redis::Client::open(redis_url)
+        .expect("Unable to connect to Redis");
 
     let server = websocket::Server::new(redis.clone()).start();
     let worker_manager = WorkerManager::new();
