@@ -181,7 +181,7 @@ Outre ces détails, il faut préciser également que le prototype implémente l�
 en regroupant les utilisateurs et les données qui leur sont communes en entités que nous qualifions d’organisation. 
 Le but est de pouvoir servir plusieurs regroupements sans pour autant avoir à répliquer le matériel. 
 
-\section{Méthodes de conception}
+\section{Matériels}
 \subsection{Choix techniques}
 Faisant référence à l’architecture suscitée, 
 voyons à présent les technologies employées dans la mise en place de la solution.
@@ -346,14 +346,10 @@ Il offre un framework web (\textbf{actix-web}) qui permet d’implémenter des s
 C’est un framework toutes batteries incluses qui supporte nativement bien de fonctionnalités comme le support des Websockets, lu protocole \acrshort{tls} ou encore de la version 2 du protocole \acrshort{http} (HTTP/2). 
 Il offre d’excellentes performances, raison pour laquelle nous l’avons choisi, pour la gestion du signalement lors des connexions \acrshort{webrtc}.
 
-La figure \ref{fig:rust_syntax} est un extrait du code source de notre prototype \textbf{StudX}, qui présente la syntaxe du langage \textbf{Rust},  et montre l'intégration des divers outils suscités.
+Ci-dessous est un extrait du code source de notre prototype \textbf{StudX}, qui présente la syntaxe du langage \textbf{Rust},  et montre l'intégration des divers outils suscités:
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.55\linewidth]{rust-syntax}
-  \caption{Syntaxe de \textbf{Rust}}
-  \label{fig:rust_syntax}
-\end{figure}
+\newpage
+\inputminted{rust}{2-partie/main.rs}
 
 \subsection{Outils de développement}
 Le tableau \ref{table:dev_tools} présente une liste non exhaustive des outils de développement employés pour la réalisation du prototype.
