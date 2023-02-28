@@ -194,24 +194,50 @@ l'organisation qu’ils dirigent et peuvent ainsi ajouter ou retirer des membres
   \label{fig:settings}
 \end{figure}
 
-\section{Perspectives}
-Le prototype StudX présente un ensemble de fonctionnalités utiles pour le déroulement de classes virtuelles. 
-Toutefois, il présente certaines limites, outre les choix de conception comme l’absence de flux vidéo. 
+\section{Discussion}
+Le développement de l'application StudX a été un projet ambitieux, 
+nécessitant la mise en place de nombreuses technologies modernes pour 
+répondre aux besoins d'un environnement en ligne en constante évolution. 
+Les fonctionnalités prévues pour l'application ont toutes été implémentées, 
+permettant une tenue efficace de classes virtuelles en temps réel.
 
-En effet, la plateforme est conçue pour être accessible aux personnes disposant de toutes leurs facultés. 
-Bien que les règles basiques d'accessibilité soient prises en compte, 
-elles ne couvrent pas totalement le besoin. Par exemple, les personnes malentendantes 
-n’ont pas la capacité de tirer profit des échanges vocaux qui sont effectués entre les divers participants. 
-Une fonctionnalité envisagée est l'intégration de modèle de Machine Learning permettant la conversion de 
-ces signaux audio en gestuelles dans le langage sourd.
+Cependant, la mise en œuvre de la technologie WebRTC a été un défi technique majeur 
+tout au long du processus de développement. Le recours à cette technologie nécessite
+une compréhension approfondie de son fonctionnement, ainsi que des compétences en 
+programmation avancées pour l'adapter à nos besoins spécifiques. Cela a été rendu 
+encore plus complexe par le fait que WebRTC est une technologie relativement nouvelle, 
+qui ne cesse de se développer.
+
+
+En outre, l'utilisation de code Open Source dans l'application a été également un facteur clé. 
+Il a fallu comprendre le fonctionnement du code et le modifier pour répondre aux exigences de notre projet. 
+Cela a nécessité un travail minutieux, impliquant une analyse approfondie du code existant, ainsi 
+que des compétences en programmation avancées pour le modifier efficacement.
+
+Malgré ces défis et bien d'autres, notre prototype est en place. Le choix du moteur Mediasoup pour les besoins de relais a été un choix judicieux. 
+Ce moteur supporte un grand nombre de participants et intègre un concept de routeur pouvant supporter jusqu'à 500 personnes. 
+Les routeurs peuvent également être connectés entre eux, offrant une grande évolutivité et une flexibilité pour répondre aux besoins futurs de l'application.
+Le choix de s'abstenir de diffuser les flux vidéo permet également d'alléger le traffic et va permettre le support d'un grand nombre.
+
+Le développement de StudX a été une expérience enrichissante. 
+Bien que des défis aient été rencontrés tout au long du processus, 
+l'application fonctionne maintenant et répond aux objectifs initialement fixés.
+
+\section{Perspectives}
+Le prototype StudX propose une variété de fonctionnalités intéressantes pour la tenue de classes virtuelles.  
+Toutefois, il présente certaines limites, outre les choix délibérés de conception comme l’absence de flux vidéo. 
+
+Bien que des règles d'accessibilité basiques aient été prises en compte, elles ne répondent pas entièrement aux 
+besoins des personnes malentendantes, qui ne peuvent pas bénéficier des échanges vocaux entre les participants. 
+Pour remédier à cela, il serait envisageable d'intégrer un modèle de Machine Learning pour la conversion des signaux 
+audio en gestes du langage des signes.
 
 Par ailleurs, dans le cadre d’un prototype, les fonctionnalités sont plutôt restreintes. 
-On peut ajouter ou améliorer des fonctions comme la persistance de la messagerie instantanée ou 
+On pourrait ajouter ou améliorer des fonctions comme la persistance de la messagerie instantanée ou 
 encore la gestion des utilisateurs.
-
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
 Après la conception et le développement de l'application, il est clair que le prototype répond aux besoins identifiés et remplit les objectifs fixés pour ce projet. 
 Les tests effectués ont démontré la fiabilité et la performance de l'application, ainsi que sa capacité à gérer les fonctionnalités attendues. 
-Cependant, cela ne signifie pas qu'elle est parfaite, car  de nombreux aspects peuvent être encore améliorés et développés pour répondre à des besoins futurs ou pour satisfaire des demandes plus spécifiques. 
+Cependant, cela ne signifie pas qu'elle est parfaite, car de nombreux aspects peuvent être encore améliorés et développés pour répondre à des besoins futurs ou pour satisfaire des demandes plus spécifiques. 
