@@ -1,15 +1,49 @@
 \documentclass{beamer}
+
+\mode<presentation> {
 \usetheme{metropolis}
+}
+
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage[french]{babel}
+\usepackage{url,color}
+\usepackage{subfigure}
+\usepackage{amsthm,amsfonts,amssymb,amscd,amsxtra, multicol}
+\usepackage{comment}
+
+\graphicspath{ {./images/} }
+
+\setbeamertemplate{caption}[numbered]
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+
 \title{Conception d'un SaaS pour les cours en ligne en milieu universitaire}
-\author{Hans B. K. TOGNON}
-\institute{Institut de Recherche et de Formation en Informatique}
-\date{\today}
+\author[Hans TOGNON]{Hans B. K. \textbf{TOGNON} \\ Supervisé par Ing. Miranda \textbf{GNONLONFOUN}}
+\institute[IFRI]{
+\textbf{I}nstitut de \textbf{F}ormation et de \textbf{R}echerche en  \textbf{I}nformatique \\
+\medskip
+% \textbf{\color{magenta}\href{mailto:contact@ifri.uac.bj}{contact@ifri.uac.bj}}
+}
 
 \begin{document}
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title Page
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
+  \thispagestyle{empty}
+  \begin{multicols}{2}
+    \begin{figure}
+        \flushleft
+        \includegraphics[width=0.11\textwidth]{logoifri}
+    \end{figure}
+    \begin{figure}
+        \flushright
+        \includegraphics[width=0.1\textwidth]{logouac}
+    \end{figure}
+    \end{multicols}
+    \vspace{-1cm}
   \titlepage
   \end{frame}
 
@@ -17,7 +51,106 @@
 % ToC
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}
-  \frametitle{Sommaire}
-  \tableofcontents
+  \frametitle{PLAN}
+  \begin{itemize}
+    \item Introduction
+    \item Revue de Littérature
+    \item Matériels et méthodes
+    \item Prototype
+    \item Résultats et Perspectives
+    \item Conclusion
+  \end{itemize}
 \end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Introduction
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{center}
+    \section{\huge{Introduction}}
+  \end{center}
+\end{frame}
+
+\begin{frame}{Introduction} %  - \small{Contexte}
+  \begin{itemize}
+    \item Contexte
+        \begin{itemize}
+            \item L'inexistence d'application mobile de covoiturage pour répondre aux besoins de transport des voyageurs \vspace{.05cm}
+            \item Réduction des coûts de transport et de la congestion routière et des émissions de carbone
+        \end{itemize}
+        
+    \item Problématique \\
+    \small{Comment concevoir et développer une application mobile de covoiturage au Bénin pour offrir une solution de transport pratique, abordable et durable pour les voyageurs, tout en garantissant la sécurité et la fiabilité de la plateforme ?}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+  \frametitle{Introduction}
+      \begin{itemize}    
+          \item Objectifs
+              \begin{itemize}
+                  \item Permettre aux utilisateurs de rechercher, trouver et réserver des trajets disponibles,
+                  \item Réduire la circulation automobile et les embouteillages
+              \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Revue de Littérature
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{center}
+    \section{\huge{Revue de Littérature}}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+  \begin{description}
+    \item[API] Application Programming Interface
+    \item[LAN] Local Area Network
+    \item[ASCII] American Standard Code for Information Interchange
+    \end{description}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Matériels et méthodes
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{center}
+    \section{\huge{Matériels et méthodes}}
+  \end{center}
+\end{frame}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Prototype
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{center}
+    \section{\huge{Prototype}}
+  \end{center}
+\end{frame}
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Résultats et Perspectives
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{center}
+    \section{\huge{Résultats et Perspectives}}
+  \end{center}
+\end{frame}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Conclusion
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \begin{center}
+    \section{\huge{Conclusion}}
+  \end{center}
+\end{frame}
+
+
 \end{document}
