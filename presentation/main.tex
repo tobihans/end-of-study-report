@@ -16,8 +16,8 @@
 
 \graphicspath{ {./images/} }
 
-\setbeamertemplate{caption}[numbered]
-\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+% \setbeamertemplate{caption}[numbered]
+% \newcommand{\tabitem}{~~\llap{\textbullet}~~}
 
 \title{Conception d'un SaaS pour les cours en ligne en milieu universitaire}
 \author[Hans TOGNON]{Hans B. K. \textbf{TOGNON} \\ Supervisé par Ing. Miranda \textbf{GNONLONFOUN}}
@@ -71,29 +71,41 @@
   \end{center}
 \end{frame}
 
-\begin{frame}{Introduction} %  - \small{Contexte}
-  \begin{itemize}
-    \item Contexte
-        \begin{itemize}
-            \item L'inexistence d'application mobile de covoiturage pour répondre aux besoins de transport des voyageurs \vspace{.05cm}
-            \item Réduction des coûts de transport et de la congestion routière et des émissions de carbone
-        \end{itemize}
-        
-    \item Problématique \\
-    \small{Comment concevoir et développer une application mobile de covoiturage au Bénin pour offrir une solution de transport pratique, abordable et durable pour les voyageurs, tout en garantissant la sécurité et la fiabilité de la plateforme ?}
-\end{itemize}
+\begin{frame}{Introduction : \small{Contexte}}
+  Les méthodes d'enseignement évoluent avec l'utilisation croissante 
+  du numérique pour une éducation plus créative et collaborative, y 
+  compris dans l'enseignement supérieur, notamment en réponse aux défis 
+  tels que la pandémie de COVID-19 et l'indisponibilité de cadres de cours 
+  adéquats.
+\end{frame}
+
+\begin{frame}{Introduction : \small{Problématique}}
+  L'expansion des cours en ligne nécessite une organisation logistique 
+  accrue et un investissement financier. Les solutions génériques s'avèrent dans bien 
+  des cas inadequates ou coûteuses.
 \end{frame}
 
 
 \begin{frame}
-  \frametitle{Introduction}
-      \begin{itemize}    
-          \item Objectifs
-              \begin{itemize}
-                  \item Permettre aux utilisateurs de rechercher, trouver et réserver des trajets disponibles,
-                  \item Réduire la circulation automobile et les embouteillages
-              \end{itemize}
-  \end{itemize}
+  \frametitle{Introduction : \small{Objectifs}}
+    Concevoir un prototype d'application permettant la tenue de cours en ligne.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introduction : \small{Objectifs} - \footnotesize{Fonctionnalités}}
+  \begin{itemize}
+    \item Organiser les classes des entités en sections bien définies ;
+    \item Définir l'organisation temporelle des classes ;
+    \item Organiser des sessions d’audio-conférence ;
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Introduction : \small{Objectifs} - \footnotesize{Fonctionnalités}}
+  \begin{itemize}
+    \item Emuler, un tant soit peu, un environnement de classe présentiel via les fonctionnalités intégrées ;
+    \item Minimiser les coûts requis dans le cadre de la mise en oeuvre d’une solution de classe virtuelle.
+\end{itemize}
 \end{frame}
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,7 +117,7 @@
   \end{center}
 \end{frame}
 
-\begin{frame}
+\begin{frame}{Revue de Littérature : \small{Formation à distance}}
   \begin{description}
     \item[API] Application Programming Interface
     \item[LAN] Local Area Network
