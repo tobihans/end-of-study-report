@@ -39,45 +39,7 @@ La figure \ref{fig:use_case_diag} en fait l'illustration.
 
 Outre le diagramme, il s'avère parfois nécessaire de fournir, en plus, des descriptions textuelles des cas 
 d’utilisation, dans le but d’apporter plus d'éclaircissements. 
-Ci-dessous, sont présentées les descriptions textuelles des cas “S’authentifier”, “Ajouter un événement” et “Rejoindre une réunion”.
-
-\subsubsection{Description textuelle du cas d’utilisation “S’authentifier”}
-\textbf{Titre} : S’authentifier\newline
-\textbf{Objectif} : Authentifier un utilisateur afin qu’il accède à la plateforme\newline
-\textbf{Acteurs} : Étudiant ou Enseignant ou Administrateur\newline
-\textbf{Pré-conditions} : 
-\begin{itemize}[noitemsep,topsep=0pt]
-  \item l’utilisateur dispose d’un compte et est admis dans au moins une organisation.
-\end{itemize}
-\textbf{Séquence nominale} :
-\begin{enumerate}[noitemsep,topsep=0pt]
-  \item l’utilisateur remplit le formulaire de connexion ;
-  \item le système authentifie l’utilisateur ;
-  \item le système redirige l’utilisateur vers la page la page d'accueil de l’organisation la plus récente.
-\end{enumerate}
-\textbf{Post-conditions} : 
-\begin{itemize}[noitemsep,topsep=0pt]
-  \item l’utilisateur dispose d’une session active.
-\end{itemize}
-\textbf{Enchaînements alternatifs} :
-\begin{itemize}[noitemsep,topsep=0pt]
-  \item A1: Identifiants incorrects\newline
-    L'enchaînement démarre au point 2.
-
-  \begin{enumerate}[noitemsep,topsep=0pt]
-    \setcounter{enumi}{1}
-    \item Le système renvoie l’utilisateur vers la page de connexion avec une notification. Ce dernier effectue à nouveau la saisie.
-  \end{enumerate}
-
-  \item A2: L’utilisateur n’appartient à aucune organisation.\newline
-    L'enchaînement prend départ au point 3.
-
-  \begin{enumerate}[noitemsep,topsep=0pt]
-    \setcounter{enumi}{2}
-    \item Le système redirige l’utilisateur vers une page 404.
-  \end{enumerate}
-\end{itemize}
-
+Ci-dessous, sont présentées les descriptions textuelles des cas “Ajouter un événement” et “Rejoindre une réunion”.
 
 \subsubsection{Description textuelle du cas d’utilisation “Ajouter un événement”}
 \textbf{Titre} : Ajouter un événement\newline
@@ -123,15 +85,8 @@ Ci-dessous, sont présentées les descriptions textuelles des cas “S’authent
 
 \subsection{Diagramme de séquence}
 Le diagramme de séquence décrit les interactions, dans l’espace temps, entre objets dans le cadre des scénarii évoqués au niveau des cas d’utilisations. 
-Les figures \ref{fig:auth_seq_diag}, \ref{fig:add_event_seq_diag} et \ref{fig:join_meet_seq_diag} illustrent les diagrammes de séquences pour les trois cas d’utilisation suscités.
+Les figures \ref{fig:add_event_seq_diag} et \ref{fig:join_meet_seq_diag} illustrent les diagrammes de séquences pour les deux cas d’utilisation suscités.
 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=\linewidth]{auth-sequence-diag}
-  \caption{Diagramme de séquence du cas d'utilisation “S’authentifier”}
-  \label{fig:auth_seq_diag}
-\end{figure}
 
 \begin{figure}[H]
   \centering
