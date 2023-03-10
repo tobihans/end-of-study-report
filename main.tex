@@ -16,6 +16,9 @@
 \renewcommand\theadgape{\Gape[4pt]}
 \renewcommand\cellgape{\Gape[4pt]}
 
+\renewcaptionname{english}{\listfigurename}{Liste des Figures}
+\renewcaptionname{english}{\listtablename}{Liste des Tables}
+
 \setlength{\glsdescwidth}{0.65\textwidth}
 
 \typeMemoire{Diplôme de Licence en Informatique}
@@ -87,11 +90,11 @@ pdfkeywords={Sass, Studx, WebRTC, online classes}
 \newpage
 
 %liste des figures
-\listoffigures 
+\listoffigures{Liste des figures} 
 \newpage
 
 %liste des tableaux
-\listoftables
+\listoftables{Liste des tableaux}
 \newpage
 
 %liste des algo
