@@ -14,7 +14,7 @@ jobs:
           root_file: main.tex
           args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -latexoption=-shell-escape
           # additional packages added as suggested here: https://superuser.com/a/1557981
-          extra_system_packages: gcc-9-base libgcc-9-dev libc6-dev python3 python-pygments
+          extra_system_packages: gcc-base libgcc-dev libc-dev python3 python-pygments
       - name: Rename the output file
         run: mv main.pdf build-${{ github.sha }}.pdf
       - name: Send PDF to Discord
