@@ -289,8 +289,7 @@ frame=leftline
 \vspace{0.25cm}
 {\footnotesize \textbf {\textsf{INSTITUT DE FORMATION ET DE\\ RECHERCHE EN INFORMATIQUE}\\}}
 \vspace{0.25cm}
-% TODO: Change this phone number
-{\scriptsize BP 526 Cotonou Tel : +229 21 14 19 88\\}
+{\scriptsize BP 526 Cotonou Tel : +229 55 02 80 70\\}
 \vspace{-0.25cm}
 {\scriptsize \url{http://www.ifri-uac.bj} Courriel : \href{mailto:contact@ifri.uac.bj}{contact@ifri.uac.bj}}
 \end{center}
