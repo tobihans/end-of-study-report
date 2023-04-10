@@ -37,12 +37,12 @@ plusieurs universités dont celle d’Abomey-Calavi,
 effectuent la transition partielle ou totale vers les classes virtuelles \cite{etudiant_dot_bj}.
 
 On distingue deux environnements d’apprentissage. 
-D’une part, les environnements asynchrones, qui offrent une totale liberté à l'apprenant quant à la gestion de son temps. 
+D’une part, les environnements \textbf{asynchrones}, qui offrent une totale liberté à l'apprenant quant à la gestion de son temps. 
 L’enseignant et lui sont séparés littéralement par le temps et la distance. Ainsi, il peut consulter les ressources au moment qui lui convient le mieux. 
 Cela permet une assimilation plus facile, étant donné que chaque apprenant peut s’adapter en fonction de ses besoins spécifiques. 
 Toutefois, il est possible que l’apprenant se retrouve isolé et ne fasse finalement aucun progrès, faute de support.
 
-D’autre part, un environnement synchrone essaie d'émuler une classe présentiel, 
+D’autre part, un environnement \textbf{synchrone} essaie d'émuler une classe présentiel, 
 à la seule différence que les participants sont physiquement distants. 
 Avec des outils de messagerie instantanée et/ou de visioconférence, 
 les apprenants peuvent interagir avec leurs pairs ainsi que le ou les enseignants.
@@ -54,6 +54,7 @@ Le tableau \ref{course_classification} en fait un récapitulatif.
 
 \begin{table}[H]
   \centering
+\caption{Classification des types de formations en ligne}
 \begin{tabular}{|l|l|l|}
   \hline
   Type de cours &  Nombre d’apprenants &  Type d’environnement \\
@@ -67,7 +68,6 @@ Le tableau \ref{course_classification} en fait un récapitulatif.
   \acrfull{ssoc} & limité & synchrone \\
   \hline
 \end{tabular}
-\caption{Classfication des types de formations en ligne}
 \label{course_classification}
 \end{table}
 
@@ -93,9 +93,13 @@ Pour établir une connexion, il faut quatre étapes à savoir la signalisation, 
   \label{fig:webrtc_protocols}
 \end{figure}
 
-La signalisation désigne le processus initial de mise en relation des pairs. 
+La figure ci-dessus présente les divers protocoles exploités par \acrshort{webrtc}.  Chacun d'eux intervient
+à une étape bien précise, dans l'établissement de la connexion entre deux appareils.
+
+
+Tout commence avec la signalisation, qui désigne le processus initial de mise en relation des pairs. 
 Sans ce processus, une machine quelconque n’a aucune idée de qui voudrait bien la contacter. 
-Pour ce faire, le protocole \acrshort{sdp} est utilisé et permet la transmission d’informations capitales comme:
+Pour ce faire, le protocole \acrshort{sdp}\textbf{SDP} est utilisé et permet la transmission d’informations capitales comme:
 
 \begin{itemize}
   \item l’adresse \acrshort{ip} et le port de chaque agent \acrshort{webrtc} (plusieurs variantes, en réalité)
@@ -106,14 +110,14 @@ Pour ce faire, le protocole \acrshort{sdp} est utilisé et permet la transmissio
 
 A la connexion, les agents \acrshort{webrtc} établissent un lien direct entre eux, sans intermédiaire. 
 Face à la multitude de possibilités de connexion (couples constitués de l’adresse \acrshort{ip} et du port), 
-le protocole \acrshort{ice} permet de choisir le meilleur candidat, en faisant recours au serveur \acrshort{stun} et parfois, à un serveur \acrshort{turn}. 
-Le serveur \acrshort{turn} permet la retransmission des données lorsqu’il est impossible pour un agent \acrshort{webrtc} d'établir un lien 
-direct avec un autre agent en raison de la configuration réseau (\acrshort{nat} et les types de liaisons possibles \cite{nat_links}).
+le protocole \acrshort{ice}\textbf{ICE} permet de choisir le meilleur candidat, en faisant recours au serveur \acrshort{stun}\textbf{STUN} et parfois, à un serveur \acrshort{turn}\textbf{TURN}. 
+Le serveur \acrshort{turn}\textbf{TURN} permet la retransmission des données lorsqu’il est impossible pour un agent \acrshort{webrtc} d'établir un lien 
+direct avec un autre agent en raison de la configuration réseau (\textbf{NAT}\acrshort{nat} et les types de liaisons possibles \cite{nat_links}).
 
-Pour assurer la sécurité de la connexion, les protocoles \acrshort{dtls} et \acrshort{srtp} offrent une couche de chiffrement 
+Pour assurer la sécurité de la connexion, les protocoles \acrshort{dtls}\textbf{DTLS} et \acrshort{srtp}\textbf{SRTP} offrent une couche de chiffrement 
 pour les contenus multimédia et les paquets brutes.
 
-Enfin, les agents peuvent s'échanger de la donnée, du contenu multimédia, presque sans latence, grâce au protocoles \acrshort{rtp} et \acrshort{sctp}.
+Enfin, les agents peuvent s'échanger de la donnée, du contenu multimédia, presque sans latence, grâce au protocoles \acrshort{rtp}\textbf{RTP} et \acrshort{sctp}\textbf{SCTP}.
 
 \acrshort{webrtc} est une technologie complexe qui requiert une certaine expertise quant à la connaissance des protocoles, 
 leur utilisation et la mise en œuvre d'applications en temps réel. 
@@ -212,6 +216,10 @@ La mise en place requiert toutefois, une certaine expertise et du matériel spé
   \caption{Démonstration de BigBlueButton}
   \label{fig:bbg_demo}
 \end{figure}
+
+Cette liste non exhaustive des outils exploités nous a permis de mieux évaluer le besoin, dans le but
+d'orienter proprement le projet de développement que nous avons mis en place. Ainsi, malgré les nombreux avantages
+qu'ils offrent, ils présentent également quelques inconvénients, notamment en termes de coût et d'accessibilité.
 
 \addcontentsline{toc}{section}{Conclusion}
 \section*{Conclusion}
