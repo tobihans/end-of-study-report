@@ -28,20 +28,11 @@
 
 \dateSoutenance{-}
 %\promo{2\up{ème}}
-\anneeScolaire{2021-2022}
+% \anneeScolaire{2021-2022}
 
 
 %%maitre de mémoire
-\encadrants{Ing. Miranda \textbf{GNONLONFOUN}}
-
-%% Membres du Jury
-\jurys{
-\begin{tabular}{llll}
-	Maurice COMLAN & Docteur & IFRI & Président \\
-	Pierre Jérome ZOHOU & Ingénieur & IFRI & Examinateur \\
-	Miranda GNONLONFOUN & Ingénieur & IFRI & Rapporteur \\
-\end{tabular}	
-}
+% \encadrants{Ing. Miranda \textbf{GNONLONFOUN}}
 
 
 \hypersetup{
@@ -58,8 +49,6 @@ pdfkeywords={Sass, Studx, WebRTC, online classes}
 
 \begin{document}
 
-\pageDeGarde
-%\pageTitre
 
 \pagecolor{white}
 
@@ -72,43 +61,35 @@ pdfkeywords={Sass, Studx, WebRTC, online classes}
 % sommaire
 \pagenumbering{roman}
 
-\setcounter{tocdepth}{0}
-\startlist{toc}
-\printlist{toc}{}{\chapter*{Sommaire}}
-\setcounter{tocdepth}{5}
-
-%% rdedicaces
-\include{0-dedicace}
-\newpage 
-
-%% remerciements
-\include{1-remerciements}
-\newpage 
+% \setcounter{tocdepth}{0}
+% \startlist{toc}
+% \printlist{toc}{}{\chapter*{Sommaire}}
+% \setcounter{tocdepth}{5}
 
 % Résume
 \include{2-resume}
 \newpage
 
 %liste des figures
-\listoffigures{Liste des figures} 
-\newpage
+% \listoffigures{Liste des figures} 
+% \newpage
 
-%liste des tableaux
-\listoftables{Liste des tableaux}
-\newpage
+% %liste des tableaux
+% \listoftables{Liste des tableaux}
+% \newpage
 
 %liste des algo
-\selectlanguage{french}
-\newpage
+% \selectlanguage{french}
+% \newpage
 
-% Les sigles et acronymes
-\setglossarystyle{altlist}
-\printnoidxglossary[title=Liste des acronymes, toctitle=Liste des acronymes, type=\acronymtype]
-\newpage
+% % Les sigles et acronymes
+% \setglossarystyle{altlist}
+% \printnoidxglossary[title=Liste des acronymes, toctitle=Liste des acronymes, type=\acronymtype]
+% \newpage
 
-% Le glossaire proprement dit
-\setglossarystyle{super}
-\printnoidxglossary[type=main]
+% % Le glossaire proprement dit
+% \setglossarystyle{super}
+% \printnoidxglossary[type=main]
 
 
 \pagenumbering{arabic}
@@ -124,9 +105,6 @@ pdfkeywords={Sass, Studx, WebRTC, online classes}
 \chapter{Revue de littérature}\label{chap:1}
 \input{1-partie/main}
 
-\chapter{Matériels et méthodes}\label{chap:2}
-\input{2-partie/main}
-
 \chapter{Résultats et Discussion}\label{chap:3}
 \input{3-partie/main}
 
@@ -134,16 +112,10 @@ pdfkeywords={Sass, Studx, WebRTC, online classes}
 %%conclusion
 \include{4-conclusion}
 % 
-\lhead[]{} \rhead[]{} \chead[]{}
+% \lhead[]{} \rhead[]{} \chead[]{}
 
 %%biblio
-\nocite{*} % include entries from the bib database that were not cited
-\printbibliography[heading=bibintoc, nottype=online, title={Bibliographie}]{}
-\printbibliography[heading=bibintoc, type=online, title={Webographie}]{}
 
 %\include{annexe}
 
-\newpage
-\tableofcontents
-
-\end{document}          
+\end{document}
